@@ -37,7 +37,8 @@ gem 'jsonapi-serializer', '~> 2.2.0'
 gem 'aasm', '~> 5.5.0'
 
 # For creating test data
-gem "factory_bot", "~> 6.2"
+gem "factory_bot_rails", '~> 6.2.0'
+gem 'faker', '~> 3.1.1'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
