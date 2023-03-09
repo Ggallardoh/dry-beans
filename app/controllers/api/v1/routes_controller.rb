@@ -18,7 +18,7 @@ class Api::V1::RoutesController < ApplicationController
   #
   # @return [nil] sets the route requested to a global variable with name @route.
   def set_route
-    @route = Route.find(params[:id])
-    return error(status: 404, title:,) if @route.nil?
+    @route = Route.find_by_id(params[:id])
+    return error(status: 404, title: 'No encontrado', detail: 'No se ha encontrado la ruta con la id especificada') if @route.nil?
   end
 end
