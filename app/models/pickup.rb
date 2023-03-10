@@ -7,10 +7,13 @@ class Pickup < ApplicationRecord
 
   aasm  do
     state :pending, initial: true
-    state :picked_up
+    state :picked_up, :canceled
 
     event :pick_up do
       transitions from: :pending, to: :picked_up
+    end
+    event :cancel do
+      transitions from: :pending, to: :canceled
     end
   end
 end
