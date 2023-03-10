@@ -11,7 +11,7 @@ RSpec.describe "Routes", type: :request do
       it 'returns status code 200' do
         expect(response).to have_http_status :ok
       end
-      it 'must return a Hash' do
+      it 'must return a JSON' do
         expect(response.content_type).to include("application/json")
       end
     end
