@@ -11,7 +11,7 @@ RSpec.describe "Deliveries", type: :request do
       it 'returns status code 204' do
         expect(response).to have_http_status :created
       end
-      it 'must return a Hash' do
+      it 'must return a JSON' do
         expect(response.content_type).to include("application/json")
       end
     end
