@@ -13,7 +13,7 @@ class Delivery < ApplicationRecord
       transitions from: :pending, to: :delivered
     end
     event :cancel do
-      transitions from :pending, to: :canceled
+      transitions from: :pending, to: :canceled
     end
   end
 end
